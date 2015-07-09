@@ -6,8 +6,6 @@ RUN mkdir -p /opt/nodejs
 ADD . /opt/nodejs
 WORKDIR /opt/nodejs
 
-# Install the dependencies modules
-RUN npm install
 # Expose the container port
 EXPOSE 5000
 

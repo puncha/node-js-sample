@@ -1,4 +1,4 @@
-var express = require('express')
+/*var express = require('express')
 var app = express();
 
 app.set('port', (process.env.PORT || 5000))
@@ -11,3 +11,31 @@ app.get('/', function(request, response) {
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 })
+*/
+var http = require('http');
+var body = [
+      '<head><title>Node app by tenxcloud</title></head>',
+      '<div style="14px Lucida Grande, Helvetica, Arial, sans-serif">',
+          '<span style="display: inline-block;width: 170px;height: 40px;background: url(https://www.tenxcloud.com/images/index/logo.png) 0 0/95% no-repeat;position: relative;top: 13px;">',
+          '</span>',
+          '<div style="width:100%;pading:50px 100px;text-align:center;">',
+              '<h1>Hello World</h1>',
+              '<p>Welcome to Node app.</span></p>',
+          '</div>',
+      '</div>'
+   ].join('');
+// var body = '<div style="14px Lucida Grande, Helvetica, Arial, sans-serif">';
+//     body += '<span style="display: inline-block;width: 170px;height: 40px;';
+//     body += 'background: url(https://www.tenxcloud.com/images/index/logo.png) 0 0/95% no-repeat;';
+//     body += 'position: relative;';
+//     body += 'top: 13px;"></span>';
+//     body += '<div style="width:100%;pading:50px 100px;text-align:center;">';
+//     body += '<h1>Hello World</h1>';
+//     body += '<p>Welcome to Node app.</span></p>';
+//     body += '</div></div>';
+http.createServer(function (request, response) {
+    response.writeHead(200, { 'Content-Length': body.length,'Content-Type': 'text/html' });
+    response.end(body);
+}).listen(5000)
+
+console.log('Node app is running at localhost:' + 5000 + '/');
