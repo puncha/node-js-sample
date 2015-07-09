@@ -24,15 +24,7 @@ var body = [
           '</div>',
       '</div>'
    ].join('');
-// var body = '<div style="14px Lucida Grande, Helvetica, Arial, sans-serif">';
-//     body += '<span style="display: inline-block;width: 170px;height: 40px;';
-//     body += 'background: url(https://www.tenxcloud.com/images/index/logo.png) 0 0/95% no-repeat;';
-//     body += 'position: relative;';
-//     body += 'top: 13px;"></span>';
-//     body += '<div style="width:100%;pading:50px 100px;text-align:center;">';
-//     body += '<h1>Hello World</h1>';
-//     body += '<p>Welcome to Node app.</span></p>';
-//     body += '</div></div>';
+
 http.createServer(function (request, response) {
     response.writeHead(200, { 'Content-Length': body.length,'Content-Type': 'text/html' });
     response.end(body);
