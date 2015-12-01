@@ -1,5 +1,5 @@
 # Dockerfile to create a docker image
-FROM node
+FROM node:4.2.2
 
 # Add files to the image
 RUN mkdir -p /opt/nodejs
