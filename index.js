@@ -14,7 +14,7 @@ app.listen(app.get('port'), function() {
 */
 var http = require('http');
 var body = [
-      '<head><title>Node app by tenxcloud</title></head>',
+      '<head><title>Node app by tenxcloud and updated by PunCha</title></head>',
       '<div style="14px Lucida Grande, Helvetica, Arial, sans-serif">',
           '<span style="display: inline-block;width: 170px;height: 40px;background: url(https://www.tenxcloud.com/images/index/logo.png) 0 0/95% no-repeat;position: relative;top: 13px;">',
           '</span>',
