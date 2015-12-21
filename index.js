@@ -12,6 +12,7 @@ app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 })
 */
+var _ = require('lodash');
 var http = require('http');
 var body = [
       '<head><title>Node app by tenxcloud and updated by PunCha</title></head>',
