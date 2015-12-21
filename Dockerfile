@@ -5,6 +5,7 @@ FROM node:4.2.2
 RUN mkdir -p /opt/nodejs
 ADD . /opt/nodejs
 WORKDIR /opt/nodejs
+RUN npm i lodash
 
 # Expose the container port
 EXPOSE 5000
